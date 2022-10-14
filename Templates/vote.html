@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}List of Posters Page{% endblock %}
+
+{% block content %}
+<h1>Vote for your Favourite Poster</h1>
+
+<div class="row"> {{ poster.no }}</div>
+    <div class="row">        {{ poster.title }}</div>
+        <div class="row">{{ poster.auth }}</div>
+        <div class="row">{{ poster.category }}</div>
+        <div class="row">{{ poster.name }}</div>
+        <div class="row">{{ poster.dept }}</div>
+        <div class="row">{{ poster.desig }}</div>
+        <div class="row">{{ poster.email }}</div>
+        <div>{{ qr.svg_inline(dark='#802929', scale=5) | safe }}</div>
+        <div>{{ url_for(request.endpoint, **request.view_args) }} </div>
+        
+        
+{% endblock %}
+
+
+{% block scripts %}
+
+{% endblock %}
